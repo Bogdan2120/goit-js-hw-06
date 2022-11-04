@@ -15,29 +15,11 @@ const images = [
 
 const galleryEl = document.querySelector('.gallery');
 
-const markup = images
-  .map(image => {
-    const item = document.createElement('li');
-    item.classList.add('gallery-item');
-
-    const img = document.createElement('img');
-    img.setAttribute('url', `${image.url}`);
-    img.setAttribute('alt', `${image.alt}`);
-
-    item.append(img);
-    console.log(item);
-    return item;
-  })
+const markupGallery = images
+  .map(
+    image =>
+      `<li class='gallery-item'><img src='${image.url} alt='${image.alt} width='300px'/></li>`,
+  )
   .join('');
 
-galleryEl.insertAdjacentHTML('beforeend', markup);
-
-// const item = document.createElement('li');
-// item.classList.add('gallery-item');
-// const img = document.createElement('img');
-// img.setAttribute('url', `jj;jkl`);
-// img.setAttribute('alt', `ihjpijm`);
-
-// item.append(img);
-// console.log(item);
-//console.log(img);
+galleryEl.insertAdjacentHTML('beforeend', markupGallery);
