@@ -8,13 +8,13 @@ let counterValue = 0;
 ref.value.textContent = counterValue;
 
 const onDecrementNumberClick = () => {
-  const value = (counterValue -= 1);
-  ref.value.textContent = value;
+  const valueNum = (counterValue -= 1);
+  ref.value.textContent = valueNum;
 };
 
 const onIncrementNumberClick = () => {
-  const value = (counterValue += 1);
-  ref.value.textContent = value;
+  const valueNum = (counterValue += 1);
+  ref.value.textContent = valueNum;
 };
 
 ref.decrenent.addEventListener('click', onDecrementNumberClick);
