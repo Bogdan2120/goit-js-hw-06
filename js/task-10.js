@@ -17,6 +17,7 @@ const createBoxes = amount => {
   for (let i = 1; i <= amount; i += 1) {
     if (i === 1) {
       createDiv += `<div style="width:${width}px; height:${height}px; background-color: ${getRandomHexColor()}" ></div>`;
+      continue;
     }
 
     createDiv += `<div style="width:${(width += 10)}px; height:${(height += 10)}px; background-color: ${getRandomHexColor()}" ></div>`;
