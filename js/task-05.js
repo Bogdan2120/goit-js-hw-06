@@ -4,7 +4,7 @@ const ref = {
 };
 
 const onInputName = e => {
-  ref.nameOutput.textContent = e.currentTarget.value;
+  ref.nameOutput.textContent = e.currentTarget.value.trim();
 
   if (e.currentTarget.value === '') {
     ref.nameOutput.textContent = 'Anonymous';
