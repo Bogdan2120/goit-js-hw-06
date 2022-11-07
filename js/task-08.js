@@ -1,18 +1,21 @@
 const formEl = document.querySelector('.login-form');
 
-const handleLoginFormSubmite = event => {
-  event.preventDefault();
+const handleLoginFormSubmite = e => {
+  e.preventDefault();
 
   const {
     elements: { email, password },
-  } = event.currentTarget;
+  } = e.currentTarget;
 
   if (email.value === '' || password.value === '') {
     return alert('Please fill in all the fields!');
   }
 
-  console.log(`Login: ${email.value}, Password: ${password.value}`);
-  event.currentTarget.reset();
+  console.log({
+    email: email.value,
+    password: password.value,
+  });
+  e.currentTarget.reset();
 };
 
 formEl.addEventListener('submit', handleLoginFormSubmite);
